@@ -1,0 +1,32 @@
+email:
+  fromEmail: kirstyannienoble.kn@gmail.com
+  fromName: 'Integral Facilities Management'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  5feb4ed7-1fcd-4451-90e6-3ce4ae865a32:
+    name: Common
+siteGroups:
+  72b14bf3-a960-4ec5-a409-329cfe2a73e7:
+    name: 'Integral Facilities Management'
+sites:
+  7eb50d00-c9e7-4576-a17e-00db53e1ee12:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-GB
+    name: 'Integral Facilities Management'
+    primary: true
+    siteGroup: 72b14bf3-a960-4ec5-a409-329cfe2a73e7
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: 'Integral Facilities Management'
+  schemaVersion: 3.1.25
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
