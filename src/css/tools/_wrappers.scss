@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Wrappers
+   ========================================================================== */
+
+.wrapper {
+    max-width: 1366px;
+    margin: 0 5%;
+    width: auto;
+    box-sizing: border-box;
+
+    @include mq(handheld) {
+        margin: 0 10%;
+    }
+
+    @include mq(desk) {
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    &--flex {
+        @extend .wrapper;
+        @include flex-justify;
+        flex-wrap: wrap;
+    }
+    &--medium {
+        max-width: 1140px;
+    }
+    &--medium.cards {
+        margin: 0 auto !important;
+    }
+}

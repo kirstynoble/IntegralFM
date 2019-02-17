@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Extra class names
+   ========================================================================== */
+
+
+.subtitle {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+
+    &--light {
+        @extend .subtitle;
+        margin-bottom: 15px;
+        color: $p-colour;
+    }
+}
+
+.all-centered * {
+    text-align: center;
+    margin: 10px auto;
+
+    &:last-child {
+        margin: 0 auto 20px;
+
+        p {
+            margin: 0;
+        }
+    }
+}

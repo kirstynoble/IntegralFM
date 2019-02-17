@@ -1,0 +1,70 @@
+// ==========================================================================
+// Typography
+// ==========================================================================
+
+    body {
+        font-size: 12pt;
+        line-height: 1.25em;
+        font-family: $base-font;
+        text-align: left;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: $base-colour;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $base-font;
+        color: $p-colour;
+    }
+
+
+    /////////////////////////////////////////
+    /////////////// Headings ////////////////
+    /////////////////////////////////////////
+
+
+    h1 {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 27px;
+        line-height: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 160%;
+    }
+
+    h4 {
+        font-size: 14px;
+        line-height: 1.25em;
+    }
+
+
+    /////////////////////////////////////////
+    ////////////// Paragraphs ///////////////
+    /////////////////////////////////////////
+
+
+    p {
+        font-size: 16px;
+        line-height: 160%;
+        font-family: $system-font;
+
+        @include mq(handheld) {
+            font-size: 17px;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }

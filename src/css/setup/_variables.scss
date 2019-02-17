@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Config Variables
+   ========================================================================== */
+
+   ////////////////////////////////////////
+   //////////////// Fonts ////////////////
+   //////////////////////////////////////
+
+   $font-thin: "Azo Sans W01 Thin";
+   $font-light: "Azo Sans W01 Light";
+   $font-regular: "Azo Sans W01 Regular";
+   $font-italic: "Azo Sans W01 Italic";
+   $font-medium: "Azo Sans W01 Medium";
+   $font-bold: "Azo Sans W01 Bold";
+   $font-black: "Azo Sans Uber W01 Regular";
+   $system-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+   ////////////////////////////////////////
+   //////////////// Text /////////////////
+   //////////////////////////////////////
+
+    $base-font: $font-light, Arial, sans-serif !default;
+    $title-font: $font-bold, Arial, sans-serif !default;
+    /* $title-font: Menlo, Monaco, Consolas, "Courier New", monospace !default; */
+    $base-font-size: 16px;
+    $base-line-height: 140%;
+
+
+    //////////////////////////////////////
+    ///////////// Colours ///////////////
+    ////////////////////////////////////
+
+    /* Base-Colours */
+    $white: #fff;                                   /* body background colour */
+    $base-colour: #222;                             /* base content colour */
+
+    /* Primary Colour */
+    $p-colour: #013e51;                             /* primary colour */
+
+    /* Secondary Colour */
+    $s-colour: #f2a900;                             /* secondary colour */
+
+    /* Grey Shades */
+    $d-grey: #353e44;                               /* dark grey */
+    $grey: #f3f4f5;                                 /* light grey */
+
+    /* Interaction Colours */
+    $link: #ec145a;
+    $visited: darken(#ec145a, 20%);
+
+
+
+    /*
+    *
+    *    Fifth-Ring Colour Palette
+    *
+    */
+
+    $primary: #ec145a; // #ce0037; // Primary | PMS206c | CMYK: 0.100.50.0 | RGB: 206.0.55
+    $secondary: #003e51; // Secondary | PMS3035c | CMYK: 100.30.19.76 | RGB: 0.62.81
+
+    $aux-1: #f2a900; // Tint 1 | PMS2617c | CMYK: 0.32.100.0 | RGB: 242.169.0
+    $aux-2: #babc16; // Tint 2 | PMS249c | CMYK: 18.0.98.10 | RGB: 186.188.22
+    $aux-3: #cbc4bc; // Tint 3 | PMS251c | CMYK: 6.7.10.11 | RGB: 203.196.188
+
+    /* availability colours */
+    $is-avail: #babc16;
+    $not-avail: #ec145a;
+    $maybe-avail: #f2a900;
+
+    /* $is-avail: #7cf97c;
+    $not-avail: #FA8177;
+    $maybe-avail: #ffda6e; */

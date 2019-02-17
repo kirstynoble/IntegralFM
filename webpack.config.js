@@ -36,8 +36,8 @@ const commonConfig = merge([{
           to: PATHS.dist + "/assets/img/"
         },
         {
-          from: PATHS.src + "/icons/",
-          to: PATHS.dist + "/assets/icons/"
+          from: PATHS.src + "/thirdparty/",
+          to: PATHS.dist + "/assets/thirdparty/"
         },
         {
           from: PATHS.src + "/fonts/",

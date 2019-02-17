@@ -1,0 +1,94 @@
+/* ==========================================================================
+Mixins
+========================================================================== */
+
+/*--- Centering Elements ---*/
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+/*--- Grid Elements ---*/
+@mixin row {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-justify {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*--- List Elements ---*/
+@mixin list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*--- Media Queries ---*/
+$breakpoints: (
+    "thumb":            480px,
+    "handheld":         560px,
+    "lap":              768px,
+    "desk":             1024px,
+    "widescreen":       1248px,
+    "widescreen-hd":    1440px
+    );
+
+    @mixin mq($width, $type: min) {
+        @if map_has_key($breakpoints, $width) {
+            $width: map_get($breakpoints, $width);
+            @if $type == max {
+                $width: $width - 1px;
+            }
+            @media only screen and (#{$type}-width: $width) {
+                @content;
+            }
+        }
+    }
+
+
+    /*--- If Responsive: Show mq-breakpoints ---*/
+    $enable-responsive-aid: false;
+
+    @if $enable-responsive-aid {
+        body:before {
+            content:"0";
+            position:fixed;
+            bottom:0px;
+            left:0;
+            font-weight:600;
+            font-size:2em;
+            opacity:0.3;
+            color:#FFF;
+            background-color:#000;
+            line-height:100%;
+            z-index:50001;
+            padding: .05em .2em;
+            border-top-right-radius: 3px;
+        }
+
+        @each $alias, $query in $breakpoints{
+            @include mq($alias){
+                body:before {
+                    content:"#{$alias}";
+                }
+            }
+        }
+    }
