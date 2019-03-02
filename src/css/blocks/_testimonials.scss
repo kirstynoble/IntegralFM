@@ -1,0 +1,41 @@
+
+.testimonial-block {
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+.testimonial-block__strip {
+    height: 325px;
+    background: #444;
+    width: 100%;
+    position: relative;
+}
+
+.testimonial-slider__quote {}
+.testimonial-slider__job {}
+.testimonial-slider__company {}
+
+.testimonial-slider__container {
+    background: gainsboro;
+    border: 1px solid #888;
+    height: 425px;
+    position: relative;
+    top: -375px;
+    z-index: 1;
+}
+
+.testimonial-slider__slider {}
+.testimonial-slider__item {
+    margin:auto;
+    text-align: center;
+}
+.testimonial-slider__content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-height: 375px;
+    padding: 25px 75px;
+}
+
+.testimonial-slider__arrows {}
+.testimonial-slider__icon {}
