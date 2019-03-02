@@ -2,27 +2,26 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    position: relative;;
-    min-height: 500px;
-}
-
-.casestudy__container {
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-    flex-direction: column;
-    width: 325px;
-    background-color: gainsboro;
-    height: auto;
-    min-height: 500px;
-    margin: 0 15% 0 auto;
     position: relative;
-}
+    min-height: 500px;
 
-.casestudy__content {
-    display: block;
-    padding: 30px;
-    align-self: center;
-    margin: auto 0;
+    &__container {
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        flex-direction: column;
+        width: auto;
+        max-width: 400px;
+        background-color: gainsboro;
+        height: auto;
+        min-height: 500px;
+        margin: 0 0 0 auto;
+        position: relative;
+    }
+    &__content {
+        display: block;
+        padding: 50px;
+        align-self: center;
+        margin: auto 0;
+    }
 }
