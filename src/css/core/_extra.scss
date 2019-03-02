@@ -2,40 +2,47 @@
    Extra class names
    ========================================================================== */
 
-   /* H2 - EXTRA CLASS TO MAKE BIGGER */
-   .block-title--h2 {
-       font-size: 36px;
-       margin: 30px 0;
-   }
+/* H2 - EXTRA CLASS TO MAKE BIGGER */
+.block-title--h2 {
+   font-size: 36px;
+   margin: 30px 0;
+}
 
-   /* SUBTITLE - FOR ABOVE HEADINGS */
+/* SUBTITLE - FOR ABOVE HEADINGS */
 
-   .subtitle {
-       color: #444;
-       font-size: 16px;
-       font-weight: 600;
-       text-transform: uppercase;
-       display: flex;
-       align-items: center;
-   }
-   .subtitle-dash {
-       width: 20px;
-       border: 2px solid #444;
-       margin: 0 20px 0 0;
-       border-radius: 2px;
-   }
-   .subtitle h4 {
-       margin: 0;
-   }
+.subtitle {
+   color: #444;
+   font-size: 16px;
+   font-weight: 600;
+   text-transform: uppercase;
+   display: flex;
+   align-items: center;
+}
+.subtitle-dash {
+   width: 20px;
+   border: 2px solid #444;
+   margin: 0 20px 0 0;
+   border-radius: 2px;
+}
+.subtitle h4 {
+   margin: 0;
+}
 
 
-   /* BODY Text */
-   p {
-       font-size: 16px;
-       line-height: 24px;
-       font-weight: 400;
-   }
+/* BODY Text */
+p {
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 400;
+}
 
-   .par-text--s {
-       color: #888;
-   }
+.par-text--s {
+   color: #888;
+}
+
+
+/* 3rd Party Override */
+
+.flickity-viewport {
+    height: 100%;
+}

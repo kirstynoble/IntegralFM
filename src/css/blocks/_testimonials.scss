@@ -4,11 +4,13 @@
     position: relative;
     height: auto;
 }
+
 .testimonial-block__strip {
     height: 325px;
     background: #444;
     width: 100%;
-    position: relative;
+    position: absolute;
+    margin-top: 50px;
 }
 
 .testimonial-slider__quote {}
@@ -20,20 +22,22 @@
     border: 1px solid #888;
     height: 425px;
     position: relative;
-    top: -375px;
-    z-index: 1;
 }
 
-.testimonial-slider__slider {}
-.testimonial-slider__item {
-    margin:auto;
-    text-align: center;
+.testimonial-slider__slider {
+    position: relative;
 }
+
+.testimonial-slider__item {
+    margin: 0 15%;
+    padding: 75px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 768px;
+}
+
 .testimonial-slider__content {
-    display: flex;
-    align-items: center;
     height: 100%;
-    max-height: 375px;
     padding: 25px 75px;
 }
 
