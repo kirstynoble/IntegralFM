@@ -1,0 +1,41 @@
+.glb-footer {
+    width: 100%;
+    background: gainsboro;
+}
+
+.glb-footer-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.glb-footer-nav > .site-nav__list {
+    flex-direction: column;
+    width: auto;
+    max-width: 35%;
+}
+
+.glb-footer-logo {
+    display: block;
+    margin: 0 0 30px;
+}
+
+.glb-footer-content {
+    width: 30%;
+}
+.glb-footer-content p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.glb-credits {
+    background-color: #cac9c9;
+    padding: 16px 0;
+    color: #ebebeb;
+}
+
+.glb-credits p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
