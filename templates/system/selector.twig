@@ -1,0 +1,6 @@
+{% if entry.template %}
+  {% set template = 'page/' ~ entry.template %}
+  {% include template %}
+{% else %}
+  error: no template selected
+{% endif %}

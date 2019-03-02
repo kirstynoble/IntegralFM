@@ -1,3 +1,4 @@
+dateModified: 1551535938
 email:
   fromEmail: kirstyannienoble.kn@gmail.com
   fromName: 'Integral Facilities Management'
@@ -5,12 +6,81 @@ email:
 fieldGroups:
   5feb4ed7-1fcd-4451-90e6-3ce4ae865a32:
     name: Common
+fields:
+  e4088b9f-d864-430b-9def-bc3718863cc0:
+    contentColumnType: string
+    fieldGroup: 5feb4ed7-1fcd-4451-90e6-3ce4ae865a32
+    handle: template
+    instructions: ''
+    name: Template
+    searchable: true
+    settings:
+      limitToSubfolder: page/
+    translationKeyFormat: null
+    translationMethod: none
+    type: superbig\templateselect\fields\TemplateSelectField
+plugins:
+  template-select:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+sections:
+  be2f020f-b422-4dde-a154-839feb00ecaa:
+    enableVersioning: true
+    entryTypes:
+      5d18f2dc-1d67-45a1-9bda-16bf9c741a14:
+        fieldLayouts:
+          71802762-c7bc-4edc-ae6e-b4fd2cb07299:
+            tabs:
+              -
+                fields:
+                  e4088b9f-d864-430b-9def-bc3718863cc0:
+                    required: false
+                    sortOrder: 1
+                name: Structure
+                sortOrder: 1
+        handle: systempages
+        hasTitleField: true
+        name: systemPages
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+      6b5c19ff-bd53-4bc0-8f9a-cfd02a58ad92:
+        fieldLayouts:
+          9aa38611-b29d-4ce8-8bc7-f12a8ae551bd:
+            tabs:
+              -
+                fields:
+                  e4088b9f-d864-430b-9def-bc3718863cc0:
+                    required: false
+                    sortOrder: 1
+                name: Structure
+                sortOrder: 1
+        handle: homepage
+        hasTitleField: true
+        name: Homepage
+        sortOrder: 2
+        titleFormat: ''
+        titleLabel: Title
+    handle: systempages
+    name: systemPages
+    propagateEntries: true
+    siteSettings:
+      7eb50d00-c9e7-4576-a17e-00db53e1ee12:
+        enabledByDefault: true
+        hasUrls: true
+        template: system/selector
+        uriFormat: '{parent.uri}/{slug}'
+    structure:
+      maxLevels: '2'
+      uid: c0703e07-3178-4f89-a0b2-511e136b9913
+    type: structure
 siteGroups:
   72b14bf3-a960-4ec5-a409-329cfe2a73e7:
     name: 'Integral Facilities Management'
 sites:
   7eb50d00-c9e7-4576-a17e-00db53e1ee12:
-    baseUrl: $DEFAULT_SITE_URL
+    baseUrl: '@web/'
     handle: default
     hasUrls: true
     language: en-GB
