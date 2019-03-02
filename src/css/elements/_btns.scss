@@ -1,0 +1,32 @@
+
+.btn {
+    padding: 12px 16px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.1);
+    outline: none;
+    font-weight: 500;
+
+    /* Primary Coloured Buttons */
+    &--p-solid {
+        border: none;
+        background: #444;
+        color: #f3f3f3;
+    }
+
+    /* Secondary Coloured Buttons */
+    &--s-solid {
+        border: none;
+        background: #888;
+        color: #f3f3f3;
+    }
+
+    &--s-border {
+        border: 2px solid #888;
+        background: #f3f3f3;
+        color: #888;
+    }
+}
+
+.item--margin-right {
+    margin-right: 16px;
+}

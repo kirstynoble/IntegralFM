@@ -1,0 +1,21 @@
+
+.page-title {
+    top: -22px;
+    position: relative;
+}
+
+.page-title__container {
+    border-radius: 5px;
+    background-color: #333;
+    display: inline-block;
+    padding: 8px 16px;
+}
+.page-title__title {
+    color: #fff; /* secondary */
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+h3 {
+    margin: 0;
+}
