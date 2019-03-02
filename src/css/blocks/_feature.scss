@@ -3,7 +3,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    min-height: 500px;
+    min-height: 550px;
+    width: 100%;
 
     &__container {
         display: flex;
@@ -14,7 +15,7 @@
         max-width: 400px;
         background-color: gainsboro;
         height: auto;
-        min-height: 500px;
+        min-height: 550px;
         margin: 0 0 0 auto;
         position: relative;
     }
