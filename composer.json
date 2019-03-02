@@ -1,6 +1,7 @@
 {
   "require": {
-    "craftcms/cms": "^3.0.0",
+    "craftcms/cms": "3.1.14",
+    "superbig/craft3-templateselect": "2.0.1",
     "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {
