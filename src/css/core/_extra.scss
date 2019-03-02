@@ -2,28 +2,40 @@
    Extra class names
    ========================================================================== */
 
+   /* H2 - EXTRA CLASS TO MAKE BIGGER */
+   .block-title--h2 {
+       font-size: 36px;
+       margin: 30px 0;
+   }
 
-.subtitle {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
+   /* SUBTITLE - FOR ABOVE HEADINGS */
 
-    &--light {
-        @extend .subtitle;
-        margin-bottom: 15px;
-        color: $p-colour;
-    }
-}
+   .subtitle {
+       color: #444;
+       font-size: 16px;
+       font-weight: 600;
+       text-transform: uppercase;
+       display: flex;
+       align-items: center;
+   }
+   .subtitle-dash {
+       width: 20px;
+       border: 2px solid #444;
+       margin: 0 20px 0 0;
+       border-radius: 2px;
+   }
+   .subtitle h4 {
+       margin: 0;
+   }
 
-.all-centered * {
-    text-align: center;
-    margin: 10px auto;
 
-    &:last-child {
-        margin: 0 auto 20px;
+   /* BODY Text */
+   p {
+       font-size: 16px;
+       line-height: 24px;
+       font-weight: 400;
+   }
 
-        p {
-            margin: 0;
-        }
-    }
-}
+   .par-text--s {
+       color: #888;
+   }

@@ -5,16 +5,16 @@
     body {
         font-size: 12pt;
         line-height: 1.25em;
-        font-family: $base-font;
+        font-family: $system-font;
         text-align: left;
         line-height: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: $base-colour;
+        color: $p-colour;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-family: $base-font;
+        font-family: $system-font;
         color: $p-colour;
     }
 

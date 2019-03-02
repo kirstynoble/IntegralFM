@@ -3,9 +3,6 @@
    ========================================================================== */
 
 .container {
-    padding: 3rem 0;
-
-    @include mq(desk) {
-        padding: 3rem 2rem;
-    }
+   padding-top: 175px;
+   padding-bottom: 175px;
 }

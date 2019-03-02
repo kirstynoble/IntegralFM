@@ -2,7 +2,21 @@
    Wrappers
    ========================================================================== */
 
+
 .wrapper {
+    max-width: 1024px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.wrapper--flex {
+    display: flex;
+}
+
+
+/* .wrapper {
     max-width: 1366px;
     margin: 0 5%;
     width: auto;
@@ -28,4 +42,4 @@
     &--medium.cards {
         margin: 0 auto !important;
     }
-}
+} */
