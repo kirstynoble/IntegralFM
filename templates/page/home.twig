@@ -3,9 +3,11 @@
     {% for block in entry.homeContent %}
         {% if block.type == "heroBlock" %}
             {% include '_partials/block_banner' %}
-        {% endif %}
 
-        {% if block.type == "textWrapBlock" %}
+        {% elseif block.type == "featuredServices" %}
+            {% include '_partials/block_featured_services' %}
+
+        {% elseif block.type == "textWrapBlock" %}
             {% include '_partials/block_text_wrap' %}
 
         {% elseif block.type == "featuredTestimonials" %}

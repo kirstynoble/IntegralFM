@@ -1,0 +1,43 @@
+
+<section class="services-block featured-childpages">
+    <div class="wrapper container {% if block.noTopPadding %}container--no-top-pad{% elseif block.noBottomPadding %}container--no-bottom-pad{% endif %}">
+        <ul class="cards">
+            {% for service in block.service %}
+                {# Background Image #}
+                    {% set cardImage = '/assets/img/nature.jpeg' %}
+                    {% if service.image %}
+                        {% for image in service.image.all() %}
+                            {% if cardImage == '' %}
+                                {% set cardImage = '/assets/img/nature.jpeg' %}
+                            {% else %}
+                                {% set cardImage = image.url %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {# Headline #}
+                    {% set headline = service.headline %}
+                {# Summary #}
+                    {% set summary = service.summary %}
+                {# Link #}
+                    {% set linkText = service.linkText %}
+                    {% set url = service.pageLink %}
+                <li class="cards__item">
+                    <a href="{{ url }}" class="card"  style="background-image: url('{{ cardImage }}');">
+                        <div class="card__content card__content--transparent">
+                            <div class="card__title">{{ headline }}</div>
+                            {% if summary %}
+                                <div class="card__text" maxlength="2"><p>{{ summary }}</p></div>
+                            {% else %}
+                                <div class="card__text"><p>Content is coming soon to tell you how amazing this book is.</p></div>
+                            {% endif %}
+                        </div>
+                        <div class="card__actions">
+                            <div class="card__btn-text">{{ linkText }}</div>
+                            <div class="card__btn"><span class="icon--arrow"></span></div>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

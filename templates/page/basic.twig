@@ -7,6 +7,9 @@
         {% elseif block.type == "textBlock" %}
             {% include '_partials/block_text' %}
 
+        {% elseif block.type == "featuredServices" %}
+            {% include '_partials/block_childpages' %}
+
         {% elseif block.type == "featuredCasestudies" %}
             {% include '_partials/block_feature' %}
 
