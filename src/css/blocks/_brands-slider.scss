@@ -1,38 +1,53 @@
-.brands-slider-block {
-    position: relative;
-}
-
 .brands-slider {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
     min-height: 500px;
-}
-
-.brands-slider__container {
-    width: auto;
-}
-
-.brands-slider__item {
-    display: block;
-    padding: 75px;
-    width: 20%;
-    border: 1px solid;
-    background-color: gainsboro;
-
-    &.is-selected {
-        background: pink;
-    }
-}
-
-.brands-slider__logo {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     position: relative;
-    width: 200px;
-    min-height: 100px;
-    max-height: 100%;
-    margin: 0 auto;
+
+    &-block {
+        position: relative;
+    }
+
+    &__container {
+        width: auto;
+        .flickity-viewport {height: 250px !important;}
+    }
+
+    &__item {
+        align-items: center;
+        background-color: #fff;
+        border: 1px solid #dcdcdc;
+        display: flex;
+        height: 100%;
+        padding: 75px;
+        width: 90%;
+        box-shadow: 0 6px 15px rgba(36, 37, 38, .08);
+
+        &.is-selected {
+            transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+            box-shadow: 0px 0px 16px 4px rgba(47, 48, 49, 0.2);
+            z-index: 2;
+        }
+        @include mq(handheld) {
+            width: 50%;
+        }
+        @include mq(desk) {
+            width: 30%;
+        }
+        @include mq(widescreen-hd) {
+            width: 20%;
+        }
+    }
+
+    &__logo {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        margin: auto;
+        max-height: 100%;
+        position: relative;
+        width: 200px;
+    }
 }
