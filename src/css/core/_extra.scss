@@ -12,14 +12,14 @@
 
 .subtitle {
     align-items: center;
-    color: #444;
+    color: $p-colour;
     display: flex;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     &-dash {
         border-radius: 2px;
-        border: 1px solid #444;
+        border: 1px solid $p-colour;
         margin: 0 20px 0 0;
         width: 20px;
     }
@@ -36,7 +36,7 @@ p {
 }
 
 .par-text--s {
-   color: #888;
+   color: $s-colour;
 }
 
 

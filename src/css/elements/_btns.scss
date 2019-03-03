@@ -8,22 +8,22 @@
 
     /* Primary Coloured Buttons */
     &--p-solid {
-        border: 2px solid #444;
-        background: #444;
+        border: 2px solid $p-colour;
+        background: $p-colour;
         color: #f3f3f3;
     }
 
     /* Secondary Coloured Buttons */
     &--s-solid {
-        border: 2px solid #888;
-        background: #888;
+        border: 2px solid $s-colour;
+        background: $s-colour;
         color: #f3f3f3;
     }
 
     &--s-border {
-        border: 2px solid #888;
+        border: 2px solid $s-colour;
         background: transparent;
-        color: #888;
+        color: $s-colour;
     }
 }
 

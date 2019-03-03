@@ -6,12 +6,12 @@
 
 .page-title__container {
     border-radius: 5px;
-    background-color: #333;
+    background-color: $s-colour;
     display: inline-block;
     padding: 8px 16px;
 }
 .page-title__title {
-    color: #fff; /* secondary */
+    color: $p-colour; /* secondary */
     font-size: 22px;
     text-transform: uppercase;
 }

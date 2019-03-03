@@ -70,7 +70,7 @@
         padding: 1.5rem;
 
         &--transparent {
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0.7);
         }
 
         &.is-row {
@@ -170,7 +170,8 @@
         @include flex-center;
         background-color: $s-colour;
         border-top: 1px solid #ececec;
-        color: $white;
+        color: $p-colour;
+        font-weight: 600;
         /* margin: 0 16px; */
         max-width: 100%;
         padding: 16px;
