@@ -11,23 +11,22 @@
 /* SUBTITLE - FOR ABOVE HEADINGS */
 
 .subtitle {
-   color: #444;
-   font-size: 16px;
-   font-weight: 600;
-   text-transform: uppercase;
-   display: flex;
-   align-items: center;
+    align-items: center;
+    color: #444;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    &-dash {
+        border-radius: 2px;
+        border: 1px solid #444;
+        margin: 0 20px 0 0;
+        width: 20px;
+    }
+    h4 {
+        margin: 0;
+    }
 }
-.subtitle-dash {
-   width: 20px;
-   border: 2px solid #444;
-   margin: 0 20px 0 0;
-   border-radius: 2px;
-}
-.subtitle h4 {
-   margin: 0;
-}
-
 
 /* BODY Text */
 p {
