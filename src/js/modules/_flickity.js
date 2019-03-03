@@ -1,7 +1,7 @@
 var Flickity = require('flickity');
 
 // A $( document ).ready() block.
-$( document ).ready(function() {
+$( window ).on( "load", function() {
     console.log( "ready!" );
 
     // NOTE: Brands-Slider
@@ -45,6 +45,5 @@ $( document ).ready(function() {
         wrapAround: true,
         draggable: false,
         autoPlay: 10000,
-        imagesLoaded: true,
     }), 'groupCells', 1);
 });
