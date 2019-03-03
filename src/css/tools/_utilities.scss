@@ -7,8 +7,8 @@
     padding-bottom: 50px;
 
    @include mq(desk) {
-       padding-top: 175px;
-       padding-bottom: 175px;
+       padding-top: 150px;
+       padding-bottom: 150px;
    }
 
    &--no-top-pad {
