@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Extra Icons
+   ========================================================================== */
+
+
+.icon {
+    display: block;
+    height: 20px;
+    margin: 0 0 0 auto;
+    width: 20px;
+
+    &--arrow,
+    &--l-arrow,
+    &--old-tel,
+    &--phone,
+    &--mobile,
+    &--skype,
+    &--email {
+        margin: 0 15px 0 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    /* Arrow's used globally */
+    &--arrow {
+        @extend .icon;
+        background-image: url("/assets/img/right-arrow.svg");
+        margin-right: 0;
+    }
+    &--l-arrow {
+        @extend .icon;
+        background-image: url("/assets/img/left-arrow.svg");
+    }
+
+    /* Used in contacts-profile */
+    &--mobile {
+        @extend .icon;
+        background-image: url("/assets/img/smartphone-call.svg");
+    }
+    &--phone {
+        @extend .icon;
+        background-image: url("/assets/img/call-answer.svg");
+    }
+    &--old-tel {
+        @extend .icon;
+        background-image: url("/assets/img/telephone-of-old-design.svg");
+    }
+    &--skype {
+        @extend .icon;
+        background-image: url("/assets/img/skype-logo.svg");
+    }
+    &--email {
+        @extend .icon;
+        background-image: url("/assets/img/black-envelope.svg");
+    }
+
+    /* Used in searchbar */
+    &--search {
+        @extend .icon;
+        background-image: url("/assets/img/search.svg");
+        background-size: cover;
+        height: 15px;
+        margin: 0 25px 0 0;
+        width: 15px;
+    }
+
+    /* Used in casestudy */
+    &--location {
+        @extend .icon;
+        background-image: url("/assets/img/maps-and-flags.svg");
+    }
+
+    .icon-arrow {
+        &:hover {
+            color: $s-colour;
+        }
+    }
+}

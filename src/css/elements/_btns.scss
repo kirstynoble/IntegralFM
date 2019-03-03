@@ -4,25 +4,25 @@
     box-sizing: border-box;
     box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.1);
     outline: none;
-    font-weight: 500;
+    font-weight: 600;
 
     /* Primary Coloured Buttons */
     &--p-solid {
-        border: none;
+        border: 2px solid #444;
         background: #444;
         color: #f3f3f3;
     }
 
     /* Secondary Coloured Buttons */
     &--s-solid {
-        border: none;
+        border: 2px solid #888;
         background: #888;
         color: #f3f3f3;
     }
 
     &--s-border {
         border: 2px solid #888;
-        background: #f3f3f3;
+        background: transparent;
         color: #888;
     }
 }

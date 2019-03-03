@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    &__item {
+        display: flex;
+        padding: 1rem;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+
+        @include mq(lap) {
+            width: 50%;
+            margin: 0;
+        }
+
+        @include mq(desk) {
+            width: 33.3333%;
+        }
+    }
+
+    .is-wide {
+        /* margin: 0 auto 25px; */
+        @include mq(lap) {
+            width: 100% !important;
+        }
+    }
+}
+
+.card {
+    background: $p-colour;
+    border-radius: 0.25rem;
+    box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+    box-shadow: 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    transition: 250ms ease;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+        box-shadow: 0 10px 20px rgba(47, 48, 49, 0.2);
+
+        .card__image {
+            filter: contrast(100%);
+        }
+        .card__btn {
+            background-color: $white;
+            transition: 250ms cubic-bezier(0.51, 0.25, 0.45, 0.99);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        min-height: 125px;
+        padding: 1.5rem;
+
+        &--transparent {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        &.is-row {
+            @include mq(lap){
+                align-items: center;
+                flex-direction: row;
+                height: auto;
+                min-height: auto;
+            }
+
+            .card__image--profile {
+                margin: auto auto 10px;
+                @include mq(lap){
+                    margin: auto 25px 0 0;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        padding: 30px 20px;
+        margin: auto;
+    }
+
+    /* &__image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        filter: contrast(70%);
+        max-height: 150px;
+        overflow: hidden;
+        position: relative;
+        transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; // 16:9 aspect ratio
+        }
+
+        &--featured {
+            max-height: 100px;
+        }
+
+        &--profile {
+            border-radius: 100%;
+            width: 75px;
+            height: 75px;
+
+            &-lg {
+                @extend .card__image--profile;
+                @include mq(lap) {
+                    width: 125px;
+                    height: 125px;
+                }
+            }
+        }
+
+        @include mq(lap) {
+            &::before {
+                padding-top: 66.6%; // 3:2 aspect ratio
+            }
+        }
+    } */
+
+    &__title {
+        color: $white;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        margin-bottom: 0;
+        margin-top: 1.25rem;
+        color: $white;
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+
+            @include mq(lap) {
+                font-size: 0.875rem;
+            }
+        }
+
+        &--light {
+            color: $white;
+            margin-top: 10px;
+            p {margin:0;}
+        }
+    }
+
+    &__actions {
+        @include flex-center;
+        background-color: $s-colour;
+        border-top: 1px solid #ececec;
+        color: $white;
+        /* margin: 0 16px; */
+        max-width: 100%;
+        padding: 16px;
+        text-align: right;
+        width: auto;
+
+        &--floating {
+            @include mq(lap) {
+                background-color: transparent;
+                border-top: 0;
+                margin: 0 5% 0 0;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+
+    &__btn {
+        background: $s-colour;
+        padding: 8px 15px;
+        display: inline-block;
+        margin: 0 0 0 auto;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+
+        &--group {
+            width: auto;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        &--white {
+            background: #fff;
+        }
+
+        span.text {
+            color: $white;
+        }
+    }
+
+    &__profile-details {
+        display: block;
+        margin-bottom: 25px;
+        text-align: center;
+        @include mq(lap) {
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+}
