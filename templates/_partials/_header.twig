@@ -1,13 +1,32 @@
-<div class="glb-header glb-header--floating">
+<div class="glb-header {% if craft.request.getUrl() == siteUrl %}glb-header--floating{% else %}glb-header--solid{% endif %}">
     <div class="wrapper wrapper--flex">
-        <div class="site-logo">
-            <img src="/assets/img/logo.png" alt="site-logo" width="150px" height="125px">
-        </div>
+        {% set siteLogo = "/assets/img/logo.svg" %}
+        {% for image in company.logo.all() %}
+            {% set siteLogo = image.url %}
+        {% endfor %}
+        <a href="/" class="site-logo">
+            <img src="{{ siteLogo }}" alt="site-logo" width="150px" height="125px">
+        </a>
         <nav class="glb-header-nav site-nav">
             <ul class="site-nav__list">
-                <li class="site-nav__item"><a class="site-nav__link" href="../components/header.html">Header</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="../components/glb-nav.html">Nav</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="../components/footer.html">Footer</a></li>
+                {% for link in site.topNavigation.all() %}
+                    {% set url = link.externalLink %}
+                    {% set external = true %}
+
+                    {% if link.internalLink.exists() %}
+                        {% set external = false %}
+                        {% for page in link.internalLink.all() %}
+                            {% set url = page.url %}
+                        {% endfor %}
+                    {% endif %}
+
+                    {% set entries = craft.entries.section('pages') %}
+                    {% set slugs = craft.app.request.segments %}
+
+                    <li class="site-nav__item">
+                        <a href="{{ url }}" {% if external %}target="_blank"{% endif %} class="site-nav__link {% if entry.slug in url %}active{% else %}{% endif %}">{{ link.headline }}</a>
+                    </li>
+                {% endfor %}
             </ul>
         </nav>
     </div>

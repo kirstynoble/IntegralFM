@@ -2,6 +2,10 @@
 
 .glb-header {
     width: 100%;
+
+    .wrapper--flex {
+        align-items: center;
+    }
 }
 
 .glb-header--floating {
