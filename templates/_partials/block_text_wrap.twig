@@ -24,12 +24,15 @@
             <div class="text-block__content">
                 {% if block.contentText %}
                     <p>{{ block.contentText }}</p>
+                {% else %}
+                    <ul class="text-block__list">
+                        {% for contentList in block.contentList %}
+                        {# Set List Item #}
+                            {% set item = contentList.listItem %}
+                            {% if item %}<li class="text-block__item">{{ item }}</li>{% endif %}
+                        {% endfor %}
+                    </ul>
                 {% endif %}
-                {# <ul class="text-block__list">
-                    {% for listItem in block.contentList %}
-                        {% if block.listItem %}<li class="text-block__item">{{ block.listItem }}</li>{% endif %}
-                    {% endfor %}
-                </ul> #}
 
             </div>
         </div>

@@ -8,7 +8,12 @@
     </a>
     <div class="slidenav__nav">
         <ul class="slidenav__list">
-            <div class="subtitle">Navigation</div>
+            <div class="subtitle">
+                {# {% if block.subtitle %} #}
+                    <hr class="subtitle-dash">
+                    <h4>Navigation</h4>
+                {# {% endif %} #}
+            </div>
             {% for link in site.topNavigation.all() %}
                 {% set url = link.externalLink %}
                 {% set external = true %}
