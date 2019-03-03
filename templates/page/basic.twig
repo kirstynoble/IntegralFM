@@ -1,0 +1,18 @@
+{% include '_partials/_pagetop' %}
+
+    {% for block in entry.mainContent %}
+        {% if block.type == "heroBlock" %}
+            {% include '_partials/block_banner' %}
+
+        {% elseif block.type == "textBlock" %}
+            {% include '_partials/block_text' %}
+
+        {% elseif block.type == "featuredCasestudies" %}
+            {% include '_partials/block_feature' %}
+
+        {% elseif block.type == "featuredBrands" %}
+            {% include '_partials/block_brands_slider' %}
+        {% endif %}
+    {% endfor %}
+
+{% include '_partials/_pagebottom' %}
