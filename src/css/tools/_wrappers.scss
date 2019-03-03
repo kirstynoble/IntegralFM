@@ -12,7 +12,11 @@
 }
 
 .wrapper--flex {
-    display: flex;
+    display: block;
+
+    @include mq(desk) {
+        display: flex;        
+    }
 }
 
 
