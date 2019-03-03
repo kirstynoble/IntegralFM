@@ -10,4 +10,11 @@
        padding-top: 175px;
        padding-bottom: 175px;
    }
+
+   &--no-top-pad {
+       padding-top: 0;
+   }
+   &--no-bottom-pad {
+       padding-bottom: 0;
+   }
 }
