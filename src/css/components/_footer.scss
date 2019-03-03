@@ -1,54 +1,57 @@
 .glb-footer {
     width: 100%;
     background: gainsboro;
-}
 
-.glb-footer-nav {
-    display: block;
-    margin-top: 35px;
-    @include mq(handheld) {
-        display: flex;
-        justify-content: space-evenly;
+    &-nav {
+        display: block;
+        margin-top: 35px;
+        > .site-nav__list {
+            flex-direction: column;
+            width: auto;
+            max-width: 100%;
+            @include mq(handheld) {
+                max-width: 35%;
+            }
+        }
+        @include mq(handheld) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        @include mq(desk) {
+            margin-top: 0;
+        }
     }
-    @include mq(desk) {
-        margin-top: 0;
-    }
-}
 
-.glb-footer-nav > .site-nav__list {
-    flex-direction: column;
-    width: auto;
-    max-width: 100%;
-    @include mq(handheld) {
-        max-width: 35%;
+    &-logo {
+        display: block;
+        margin: 0 0 30px;
     }
-}
 
-.glb-footer-logo {
-    display: block;
-    margin: 0 0 30px;
-}
-
-.glb-footer-content {
-    width: 100%;
-    @include mq(desk) {
-        width: 30%;
+    &-content {
+        width: 100%;
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        @include mq(desk) {
+            width: 30%;
+        }
     }
-}
-.glb-footer-content p {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
+
+    a.site-nav__link.btn.btn--s-border {
+        font-size: 14px;
+    }
 }
 
 .glb-credits {
     background-color: #cac9c9;
     padding: 16px 0;
-    color: #ebebeb;
-}
+    color: $p-colour;
 
-.glb-credits p {
-    margin: 0;
-    font-size: 14px;
-    text-align: center;
+    p {
+        margin: 0;
+        font-size: 14px;
+        text-align: center;
+    }
 }
