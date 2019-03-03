@@ -1,4 +1,4 @@
-dateModified: 1551610541
+dateModified: 1551622638
 email:
   fromEmail: kirstyannienoble.kn@gmail.com
   fromName: 'Integral Facilities Management'
@@ -104,6 +104,18 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  41b6bcf7-c0b5-46c8-8fe8-0b89f78864c3:
+    contentColumnType: boolean
+    fieldGroup: abd43e00-5692-4fa8-acc2-c8f36e5e042b
+    handle: anonymous
+    instructions: ''
+    name: Anonymous
+    searchable: true
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   55cbd6ca-48c6-4176-979d-1c553f091e6d:
     contentColumnType: text
     fieldGroup: a5851e7d-bf76-472c-b9fa-9f0b4969eb05
@@ -210,8 +222,8 @@ fields:
       charLimit: ''
       code: ''
       columnType: text
-      initialRows: '4'
-      multiline: ''
+      initialRows: '2'
+      multiline: '1'
       placeholder: ''
     translationKeyFormat: null
     translationMethod: none
@@ -643,6 +655,9 @@ matrixBlockTypes:
               01806408-a194-40e2-8abf-8b69f7f1353f:
                 required: false
                 sortOrder: 2
+              7701a6a6-0e4c-401f-89d8-b0fb0561f138:
+                required: false
+                sortOrder: 7
               78ddb5b3-6e8a-4c6d-aca0-f3bd4014624b:
                 required: false
                 sortOrder: 1
@@ -655,6 +670,9 @@ matrixBlockTypes:
               db691194-ceba-443b-986a-dab0b448997f:
                 required: false
                 sortOrder: 4
+              f17440ba-d8f3-4a0d-9501-9ed5f54aa804:
+                required: false
+                sortOrder: 6
             name: Content
             sortOrder: 1
     fields:
@@ -675,6 +693,18 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\PlainText
+      7701a6a6-0e4c-401f-89d8-b0fb0561f138:
+        contentColumnType: boolean
+        fieldGroup: null
+        handle: secondaryColour
+        instructions: 'If you have two ''Text Wrap Blocks'' why not make this one have a different coloured background.'
+        name: 'Secondary Colour'
+        searchable: true
+        settings:
+          default: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Lightswitch
       78ddb5b3-6e8a-4c6d-aca0-f3bd4014624b:
         contentColumnType: text
         fieldGroup: null
@@ -715,8 +745,8 @@ matrixBlockTypes:
           charLimit: ''
           code: ''
           columnType: text
-          initialRows: '4'
-          multiline: ''
+          initialRows: '2'
+          multiline: '1'
           placeholder: ''
         translationKeyFormat: null
         translationMethod: none
@@ -733,6 +763,30 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\Url
+      f17440ba-d8f3-4a0d-9501-9ed5f54aa804:
+        contentColumnType: text
+        fieldGroup: null
+        handle: contentList
+        instructions: ''
+        name: 'Content List'
+        searchable: true
+        settings:
+          addRowLabel: 'Add a row'
+          columnType: text
+          columns:
+            col1:
+              handle: listItem
+              heading: 'List Item'
+              type: singleline
+              width: ''
+          defaults:
+            row1:
+              col1: ''
+          maxRows: ''
+          minRows: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Table
     handle: textWrapBlock
     name: 'Text Wrap Block'
     sortOrder: 2
@@ -1007,13 +1061,16 @@ sections:
                 fields:
                   17a9818a-d11c-424c-b0cb-ea7e591db689:
                     required: false
+                    sortOrder: 3
+                  41b6bcf7-c0b5-46c8-8fe8-0b89f78864c3:
+                    required: false
                     sortOrder: 2
                   940e1eca-459f-42e8-b388-6e36ea57b2cf:
                     required: false
                     sortOrder: 1
                   ccad9bfd-f0ed-41d3-b873-3c0371ea2f80:
                     required: false
-                    sortOrder: 3
+                    sortOrder: 4
                 name: Content
                 sortOrder: 1
         handle: testimonial
