@@ -1,0 +1,13 @@
+.bordered-image {
+    border: 1px solid gainsboro;
+    padding: 5px;
+    background: #f2f2f2;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.bordered-image caption {
+    color: #333;
+    font-size: 10px;
+}

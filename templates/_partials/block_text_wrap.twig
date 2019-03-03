@@ -1,12 +1,15 @@
-<section class="text-block">
+<section class="text-block {% if block.secondaryColour %}text-block--bgsecondary{% endif %}">
     <div class="container">
         <div class="wrapper wrapper--flex">
             <div class="text-block__content">
                 <div class="subtitle">
-                    <hr class="subtitle-dash">
-                    {% if block.subtitle %}<h4>{{ block.subtitle }}</h4>{% endif %}
+                    {% if block.subtitle %}
+                        <hr class="subtitle-dash">
+                        <h4>{{ block.subtitle }}</h4>
+                    {% endif %}
                 </div>
                 {% if block.headline %}<h2 class="block-title--h2">{{ block.headline }}</h2>{% endif %}
+                <h3 class="block-title--h3">Facilities, Property & Corporate Services Management</h3>
                 <div class="block__actions">
                     {% if block.pageLink %}
                         <a href="{{ block.pageLink }}">
@@ -18,11 +21,17 @@
                     {% endif %}
                 </div>
             </div>
-            {% if block.contentText %}
-                <div class="text-block__content">
+            <div class="text-block__content">
+                {% if block.contentText %}
                     <p>{{ block.contentText }}</p>
-                </div>
-            {% endif %}
+                {% endif %}
+                {# <ul class="text-block__list">
+                    {% for listItem in block.contentList %}
+                        {% if block.listItem %}<li class="text-block__item">{{ block.listItem }}</li>{% endif %}
+                    {% endfor %}
+                </ul> #}
+
+            </div>
         </div>
     </div>
 </section>
