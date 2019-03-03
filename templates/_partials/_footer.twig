@@ -2,32 +2,59 @@
     <div class="container">
         <div class="wrapper">
             <div class=" glb-footer-logo">
-                <div class="site-logo">
-                    <img src="/assets/img/logo.png" alt="site-logo" width="150px" height="125px">
-                </div>
+                {% set siteLogo = "/assets/img/logo.svg" %}
+                {% for image in company.logo.all() %}
+                    {% set siteLogo = image.url %}
+                {% endfor %}
+                <a href="/" class="site-logo">
+                    <img src="{{ siteLogo }}" alt="site-logo" width="150px" height="125px">
+                </a>
             </div>
         </div>
         <div class="wrapper wrapper--flex">
             <div class="glb-footer-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                {% if site.footerContent %}<p>{{ site.footerContent }}</p>{% endif %}
                 <!-- Social Icons -->
             </div>
             <nav class="glb-footer-nav">
                 <ul class="site-nav__list">
-                    <li class="site-nav__item"><a class="site-nav__link" href="../components/header.html">About Us</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="../components/glb-nav.html">Experience</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="../components/footer.html">Contact Us</a></li>
+                    {% for link in site.footerNav.all() %}
+                        {% set url = link.externalLink %}
+                        {% set external = true %}
+
+                        {% if link.internalLink.exists() %}
+                            {% set external = false %}
+                            {% for page in link.internalLink.all() %}
+                                {% set url = page.url %}
+                            {% endfor %}
+                        {% endif %}
+
+                        {% set entries = craft.entries.section('pages') %}
+                        {% set slugs = craft.app.request.segments %}
+
+                        <li class="site-nav__item">
+                            <a href="{{ url }}" {% if external %}target="_blank"{% endif %} class="site-nav__link {% if entry.slug in url %}active{% else %}{% endif %}">{{ link.headline }}</a>
+                        </li>
+                    {% endfor %}
                 </ul>
                 <ul class="site-nav__list">
-                    <li class="site-nav__item"><a class="site-nav__link" href="../components/header.html">Building Name</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="../components/glb-nav.html">Address Line 1</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="../components/footer.html">Address Line 2</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="../components/footer.html">Postcode</a></li>
+                    {% for address in company.companyAddress %}
+                        <li class="site-nav__item">
+                            <a class="site-nav__link" href="../components/header.html">{{ address.addressLine }}</a>
+                        </li>
+                    {% endfor %}
                 </ul>
                 <ul class="site-nav__list">
-                    <li class="site-nav__item">Client Portal</li>
-                    <li class="site-nav__item"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="../components/footer.html">Client Portal</a></li>
+                    {% if company.chdFooterText %}
+                        <li class="site-nav__item">
+                            <p>{{ company.chdFooterText }}</p>
+                        </li>
+                    {% endif %}
+                    {% if company.clientHelpDeskLink %}
+                        <li class="site-nav__item">
+                            <a href="{{ company.clientHelpDeskLink }}" class="site-nav__link">Client Portal</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </nav>
         </div>
