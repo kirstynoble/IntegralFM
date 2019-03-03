@@ -1,10 +1,22 @@
 {% include '_partials/_pagetop' %}
 
-    {% include '_partials/block_banner' %}
-    {% include '_partials/block_feature' %}
-    {% include '_partials/block_text_wrap' %}
-    {# {% include '_partials/block_testimonials' %} #}
-    {% include '_partials/block_text' %}
-    {% include '_partials/block_brands_slider' %}
+    {% for block in entry.homeContent %}
+        {% if block.type == "heroBlock" %}
+            {% include '_partials/block_banner' %}
+        {% endif %}
+
+        {% if block.type == "textWrapBlock" %}
+            {% include '_partials/block_text_wrap' %}
+
+        {% elseif block.type == "featuredTestimonials" %}
+            {% include '_partials/block_testimonials' %}
+
+        {% elseif block.type == "featuredCasestudies" %}
+            {% include '_partials/block_feature' %}
+
+        {% elseif block.type == "featuredBrands" %}
+            {% include '_partials/block_brands_slider' %}
+        {% endif %}
+    {% endfor %}
 
 {% include '_partials/_pagebottom' %}
