@@ -11,29 +11,26 @@
 {% endif %}
 
 {# Homepage Banner and Internal Page Banners #}
-<div class="banner banner--large" style="background-image: url('{{ heroImage }}');">
+<div class="banner {% if craft.request.getUrl() == siteUrl %}banner--large{% endif %}" style="background-image: url('{{ heroImage }}');">
     <div class="banner__container">
         <div class="banner__text wrapper">
-            <h2 class="banner__title banner__title--large">We provide a unique service to our clients.</h2>
+            {% if block.headline %}
+                <h2 class="banner__title {% if craft.request.getUrl() == siteUrl %}banner__title--large{% endif %}">{{ block.headline }}</h2>
+            {% else%}
+                <h2 class="banner__title {% if craft.request.getUrl() == siteUrl %}banner__title--large{% endif %}">We provide a unique service to our clients.</h2>
+            {% endif %}
         </div>
     </div>
 </div>
 
-
-{# <div class="banner" style="background-image: url('https://placeimg.com/1400/768/nature');">
-    <div class="banner__container">
-        <div class="banner__text wrapper">
-            <h2 class="banner__title">We provide a unique service to our clients.</h2>
-        </div>
-    </div>
-</div> #}
-
-{# <section class="main-content">
-    <div class="page-title">
-        <div class="wrapper">
-            <div class="page-title__container">
-                <h3 class="page-title__title">About Us</h3>
+{% if craft.request.getUrl() != siteUrl %}
+    <section class="main-content">
+        <div class="page-title">
+            <div class="wrapper">
+                <div class="page-title__container">
+                    <h3 class="page-title__title">{{ entry.title }}</h3>
+                </div>
             </div>
         </div>
-    </div>
-</section> #}
+    </section>
+{% endif %}
