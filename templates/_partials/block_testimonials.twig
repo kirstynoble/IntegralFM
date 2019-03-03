@@ -3,26 +3,30 @@
 {% endif %}
 
 <div class="testimonial-block">
-    <div class="container">
-        <div class="testimonial-block__strip"></div>
-        <div class="testimonial-slider__container wrapper">
-            <div class="testimonial-slider__content testimonial-slider__slider">
-                {% for testimonial in block.selectedItems %}
-                    {% if testimonial.level == "1" %}
-                        <div class="testimonial-slider__item">
+    <div class="testimonial-block__strip"></div>
+    <div class="testimonial-slider__container wrapper">
+        <div class="testimonial-slider__slider">
+            {% for testimonial in block.selectedItems %}
+                {% if testimonial.level == "1" %}
+                    <div class="testimonial-slider__item">
+                        <div class="testimonial-slider__content">
                             {% if testimonial.quote %}
                                 <p class="testimonial-slider__quote">{{ testimonial.quote }}</p>
                             {% endif %}
-                            {% if testimonial.jobTitle %}
-                                <h4 class="testimonial-slider__job">{{ testimonial.jobTitle }}</h4>
-                            {% endif %}
-                            {% if testimonial.companyName %}
-                                <h3 class="testimonial-slider__company">{{ testimonial.companyName }}</h3>
+                            {% if testimonial.anonymous %}
+                                <h3 class="testimonial-slider__company">Anonymous</h3>
+                            {% else %}
+                                {% if testimonial.jobTitle %}
+                                    <h4 class="testimonial-slider__job">{{ testimonial.jobTitle }}</h4>
+                                {% endif %}
+                                {% if testimonial.companyName %}
+                                    <h3 class="testimonial-slider__company">{{ testimonial.companyName }}</h3>
+                                {% endif %}
                             {% endif %}
                         </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>

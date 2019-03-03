@@ -3,43 +3,79 @@
     width: 100%;
     position: relative;
     height: auto;
+    top: 50px;
+
+    &__strip {
+        height: 325px;
+        background: #444;
+        width: 100%;
+        position: absolute;
+        margin-top: 50px;
+    }
+    &__icon {}
 }
 
-.testimonial-block__strip {
-    height: 325px;
-    background: #444;
-    width: 100%;
-    position: absolute;
-    margin-top: 50px;
+
+.testimonial-slider {
+    &__quote {
+        font-size: 16px;
+        font-weight: 600;
+        font-style: italic;
+        color: $p-colour;
+        @include mq(lap) {
+            font-size: 20px;
+        }
+    }
+    &__job {
+        font-size: 18px;
+        font-weight: 600;
+        color: $p-colour;
+        margin: 32px 0 0;
+    }
+    &__company {
+        font-size: 16px;
+        font-weight: 600;
+        font-style: italic;
+        color: $p-colour;
+        margin: 16px 0 0;
+    }
+
+    &__container {
+        background: gainsboro;
+        border: 2px solid #888;
+        height: 425px;
+        position: relative;
+        max-width: 90%;
+        @include mq(widescreen) {
+            max-width: 1140px;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        height: 100%;
+        padding: 25px 75px;
+        margin: 0 -60px;
+    }
+
+    &__item {
+        margin: 0 15%;
+        padding: 50px 0;
+        text-align: center;
+        width: 100%;
+        max-width: 768px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+        @include mq(widescreen) {
+            padding: 75px 0;
+        }
+    }
+
+    &__content {
+        margin: auto;
+    }
+
+    &__arrows {}
 }
-
-.testimonial-slider__quote {}
-.testimonial-slider__job {}
-.testimonial-slider__company {}
-
-.testimonial-slider__container {
-    background: gainsboro;
-    border: 1px solid #888;
-    height: 425px;
-    position: relative;
-}
-
-.testimonial-slider__slider {
-    position: relative;
-}
-
-.testimonial-slider__item {
-    margin: 0 15%;
-    padding: 75px 0;
-    text-align: center;
-    width: 100%;
-    max-width: 768px;
-}
-
-.testimonial-slider__content {
-    height: 100%;
-    padding: 25px 75px;
-}
-
-.testimonial-slider__arrows {}
-.testimonial-slider__icon {}
