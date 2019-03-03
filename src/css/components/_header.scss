@@ -3,25 +3,39 @@
 .glb-header {
     width: 100%;
 
+    &--floating {
+        position: absolute;
+        padding-top: 50px;
+    }
+
+    &--solid {
+        background-color: #444;
+        color: white;
+        padding: 32px 0;
+    }
+
+    a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+    }
+
+    &-nav {
+        > .site-nav__list {
+            display: none;
+            @include mq(desk) {
+                display: flex;
+            }
+        }
+        > .hamburger {
+            display: block;
+            @include mq(desk) {
+                display: none;
+            }
+        }
+    }
     .wrapper--flex {
         display: flex;
         align-items: center;
     }
-}
-
-.glb-header--floating {
-    position: absolute;
-    padding-top: 50px;
-}
-
-.glb-header--solid {
-    background-color: #444;
-    color: white;
-    padding: 32px 0;
-}
-
-.glb-header a {
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
 }

@@ -8,6 +8,12 @@
             <img src="{{ siteLogo }}" alt="site-logo" width="150px" height="125px">
         </a>
         <nav class="glb-header-nav site-nav">
+            <!-- Toggle open and closing side navigation -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
             <ul class="site-nav__list">
                 {% for link in site.topNavigation.all() %}
                     {% set url = link.externalLink %}
@@ -32,17 +38,4 @@
     </div>
 </div>
 
-{# <div class="glb-header glb-header--solid">
-    <div class="wrapper wrapper--flex">
-        <div class="site-logo">
-            <img src="/assets/img/logo.png" alt="site-logo" width="150px" height="125px">
-        </div>
-        <nav class="glb-header-nav site-nav">
-            <ul class="site-nav__list">
-                <li class="site-nav__item"><a class="site-nav__link" href="../components/header.html">Header</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="../components/glb-nav.html">Nav</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="../components/footer.html">Footer</a></li>
-            </ul>
-        </nav>
-    </div>
-</div> #}
+{% include '_partials/_mobilenav.twig' %}

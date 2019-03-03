@@ -1,0 +1,48 @@
+/*
+*    hamburger styling, containing:
+*        - hamburger class
+*        - each line styling
+*        - hamburger animation
+*        - media queries
+*/
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    width: auto;
+    float: right;
+    z-index: 9999;
+    position: relative;
+    @include mq(thumb) {
+        margin: auto;
+    }
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    max-width: 100%;
+    background-color: $white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.toggle-ico-active:nth-child(1) {
+    -webkit-transform: rotate(-45deg) translate(-4.5px, 6px);
+    transform: rotate(-45deg) translate(-4.5px, 6px);
+
+    @include mq(lap) {
+        background-color: $white;
+    }
+}
+
+.toggle-ico-active:nth-child(2) {opacity: 0;}
+
+.toggle-ico-active:nth-child(3) {
+    -webkit-transform: rotate(45deg) translate(-5px, -7px);
+    transform: rotate(45deg) translate(-5px, -7px);
+
+    @include mq(lap) {
+        background-color: $white;
+    }
+}

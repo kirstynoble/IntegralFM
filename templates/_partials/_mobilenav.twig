@@ -1,0 +1,54 @@
+<nav class="slidenav">
+    {% set siteLogo = "/assets/img/logo.svg" %}
+    {% for image in company.logo.all() %}
+        {% set siteLogo = image.url %}
+    {% endfor %}
+    <a href="/" class="site-logo">
+        <img src="{{ siteLogo }}" alt="site-logo" width="150px" height="125px">
+    </a>
+    <div class="slidenav__nav">
+        <ul class="slidenav__list">
+            <div class="subtitle">Navigation</div>
+            {% for link in site.topNavigation.all() %}
+                {% set url = link.externalLink %}
+                {% set external = true %}
+
+                {% if link.internalLink.exists() %}
+                    {% set external = false %}
+                    {% for page in link.internalLink.all() %}
+                        {% set url = page.url %}
+                    {% endfor %}
+                {% endif %}
+
+                {% set entries = craft.entries.section('pages') %}
+                {% set slugs = craft.app.request.segments %}
+
+                <li class="site-nav__item slidenav__item">
+                    <a href="{{ url }}" {% if external %}target="_blank"{% endif %} class="site-nav__link slidenav__link {% if entry.slug in url %}active{% else %}{% endif %}">{{ link.headline }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {# <div class="subtitle">Let's Connect</div> #}
+        {# <div class="social-link">
+            <a href="https://www.linkedin.com/company/ffolkes-offshore-ltd" class="social-link__item" target="_blank">
+                <span class="social-link__icon icon-linkedin"></span>
+            </a>
+            <a href="https://twitter.com/ffolkesoffshore" class="social-link__item" target="_blank">
+                <span class="social-link__icon icon-twitter"></span>
+            </a>
+            <a href="https://www.facebook.com/ffolkesoffshore/" class="social-link__item" target="_blank">
+                <span class="social-link__icon icon-facebook"></span>
+            </a>
+            <a href="https://www.instagram.com/ffolkesoffshore/" class="social-link__item" target="_blank">
+                <span class="social-link__icon icon-instagram"></span>
+            </a>
+        </div> #}
+    </div>
+    <hr class="fx-social__hr">
+    <div class="slidenav__portal">
+        <a href="/" class="social-link__item" target="_blank">
+            Login to the client portal
+            {# <span class="social-link__icon icon-enter"></span> #}
+        </a>
+    </div>
+</nav>
