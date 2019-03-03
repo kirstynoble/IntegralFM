@@ -18,6 +18,8 @@
             </div>
             <nav class="glb-footer-nav">
                 <ul class="site-nav__list">
+                    <li class="site-nav__item site-nav__subtitle">Subtitle<li>
+
                     {% for link in site.footerNav.all() %}
                         {% set url = link.externalLink %}
                         {% set external = true %}
@@ -38,6 +40,7 @@
                     {% endfor %}
                 </ul>
                 <ul class="site-nav__list">
+                    <li class="site-nav__item site-nav__subtitle">Subtitle<li>
                     {% for address in company.companyAddress %}
                         <li class="site-nav__item">
                             <a class="site-nav__link" href="../components/header.html">{{ address.addressLine }}</a>
@@ -45,6 +48,7 @@
                     {% endfor %}
                 </ul>
                 <ul class="site-nav__list">
+                    <li class="site-nav__item site-nav__subtitle">Subtitle<li>
                     {% if company.chdFooterText %}
                         <li class="site-nav__item">
                             <p>{{ company.chdFooterText }}</p>

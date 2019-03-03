@@ -4,14 +4,24 @@
 }
 
 .glb-footer-nav {
-    display: flex;
-    justify-content: space-evenly;
+    display: block;
+    margin-top: 35px;
+    @include mq(handheld) {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    @include mq(desk) {
+        margin-top: 0;
+    }
 }
 
 .glb-footer-nav > .site-nav__list {
     flex-direction: column;
     width: auto;
-    max-width: 35%;
+    max-width: 100%;
+    @include mq(handheld) {
+        max-width: 35%;
+    }
 }
 
 .glb-footer-logo {
@@ -20,7 +30,10 @@
 }
 
 .glb-footer-content {
-    width: 30%;
+    width: 100%;
+    @include mq(desk) {
+        width: 30%;
+    }
 }
 .glb-footer-content p {
     margin: 0;
