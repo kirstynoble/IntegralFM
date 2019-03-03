@@ -1,32 +1,25 @@
-<h1>Feature Block</h1>
+{% if block.headline %}
+    <h2>{{ block.headline }}</h2>
+{% endif %}
 
 <section class="casestudy-block">
     <div class="casestudy-block__list">
-        <div class="casestudy" style="background-image: url('https://placeimg.com/1000/480/nature');">
-            <div class="wrapper">
-                <div class="casestudy__container">
-                    <div class="casestudy__content">
-                        <h2 class="block-title--h2">Complex Facility Operations</h2>
-                        <p class="par-text--s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="block__actions">
-                            <button class="btn btn--p-solid">Read More</button>
+        {% for casestudy in block.selectedItems %}
+            {% if casestudy.level == "1" %}
+                <div class="casestudy" style="background-image: url('https://placeimg.com/1000/480/nature');">
+                    <div class="wrapper">
+                        <div class="casestudy__container">
+                            <div class="casestudy__content">
+                                <h2 class="block-title--h2">{{ casestudy.title }}</h2>
+                                <p class="par-text--s">{{ casestudy.contentText }}</p>
+                                <div class="block__actions">
+                                    <a href="{{ casestudy.pageLink }}" class="btn btn--p-solid">Read More</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="casestudy" style="background-image: url('https://placeimg.com/1000/480/nature');">
-            <div class="wrapper">
-                <div class="casestudy__container">
-                    <div class="casestudy__content">
-                        <h2 class="block-title--h2">Complex Facility Operations</h2>
-                        <p class="par-text--s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="block__actions">
-                            <button class="btn btn--p-solid">Read More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            {% endif %}
+        {% endfor %}
     </div>
 </section>

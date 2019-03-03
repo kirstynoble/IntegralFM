@@ -1,10 +1,24 @@
-<div class="banner banner--large" style="background-image: url('https://placeimg.com/1400/900/nature');">
+{# Hero Image Variables #}
+{% set heroImage = '/assets/img/nature.jpeg' %}
+{% if block.image %}
+    {% for image in block.image.all() %}
+        {% if heroImage == '' %}
+            {% set heroImage = '/assets/img/nature.jpeg' %}
+        {% else %}
+            {% set heroImage = image.url %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{# Homepage Banner and Internal Page Banners #}
+<div class="banner banner--large" style="background-image: url('{{ heroImage }}');">
     <div class="banner__container">
         <div class="banner__text wrapper">
             <h2 class="banner__title banner__title--large">We provide a unique service to our clients.</h2>
         </div>
     </div>
 </div>
+
 
 {# <div class="banner" style="background-image: url('https://placeimg.com/1400/768/nature');">
     <div class="banner__container">

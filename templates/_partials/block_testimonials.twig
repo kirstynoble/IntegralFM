@@ -1,20 +1,27 @@
-<h1>Testimonial Slider Block</h1>
+{% if block.headline %}
+    <h2>{{ block.headline }}</h2>
+{% endif %}
 
 <div class="testimonial-block">
     <div class="container">
         <div class="testimonial-block__strip"></div>
         <div class="testimonial-slider__container wrapper">
             <div class="testimonial-slider__content testimonial-slider__slider">
-                <div class="testimonial-slider__item">
-                    <p class="testimonial-slider__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <h4 class="testimonial-slider__job">This is a subtitle for your text</h4>
-                    <h3 class="testimonial-slider__company">This is a subtitle for your text</h3>
-                </div>
-                <div class="testimonial-slider__item">
-                    <p class="testimonial-slider__quote">BIiiiiiig Buuuttttssss</p>
-                    <h4 class="testimonial-slider__job">This is a subtitle for your text</h4>
-                    <h3 class="testimonial-slider__company">This is a subtitle for your text</h3>
-                </div>
+                {% for testimonial in block.selectedItems %}
+                    {% if testimonial.level == "1" %}
+                        <div class="testimonial-slider__item">
+                            {% if testimonial.quote %}
+                                <p class="testimonial-slider__quote">{{ testimonial.quote }}</p>
+                            {% endif %}
+                            {% if testimonial.jobTitle %}
+                                <h4 class="testimonial-slider__job">{{ testimonial.jobTitle }}</h4>
+                            {% endif %}
+                            {% if testimonial.companyName %}
+                                <h3 class="testimonial-slider__company">{{ testimonial.companyName }}</h3>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>

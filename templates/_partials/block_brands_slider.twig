@@ -1,24 +1,40 @@
-<h1>Brands Slider Block</h1>
-
 <div class="brands-slider-block">
     <div class="brands-slider__container brands-carousel">
-        <div class="brands-slider__item">
-            <img src="https://placeimg.com/200/100/nature" class="brands-slider__logo">
-        </div>
-        <div class="brands-slider__item">
-            <img src="https://placeimg.com/200/100/nature" class="brands-slider__logo">
-        </div>
-        <div class="brands-slider__item">
-            <img src="https://placeimg.com/200/100/nature" class="brands-slider__logo">
-        </div>
-        <div class="brands-slider__item">
-            <img src="https://placeimg.com/200/100/nature" class="brands-slider__logo">
-        </div>
-        <div class="brands-slider__item">
-            <img src="https://placeimg.com/200/100/nature" class="brands-slider__logo">
-        </div>
-        <div class="brands-slider__item">
-            <img src="https://placeimg.com/200/100/nature" class="brands-slider__logo">
-        </div>
+        {% for brand in block.selectedItems %}
+            {% if brand.level == "1" %}
+                {# Brand Image Variables #}
+                {% set brandImage = '/assets/img/nature.jpeg' %}
+                {% for image in brand.image.all() %}
+                    {% set brandImage = image.url %}
+                {% endfor %}
+                <div class="brands-slider__item">
+                    <img src="{{ brandImage }}" class="brands-slider__logo">
+                </div>
+            {% endif %}
+        {% endfor %}
+        {% for brand in block.selectedItems %}
+            {% if brand.level == "1" %}
+                {# Brand Image Variables #}
+                {% set brandImage = '/assets/img/nature.jpeg' %}
+                {% for image in brand.image.all() %}
+                    {% set brandImage = image.url %}
+                {% endfor %}
+                <div class="brands-slider__item">
+                    <img src="{{ brandImage }}" class="brands-slider__logo">
+                </div>
+            {% endif %}
+        {% endfor %}
+        {% for brand in block.selectedItems %}
+            {% if brand.level == "1" %}
+                {# Brand Image Variables #}
+                {% set brandImage = '/assets/img/nature.jpeg' %}
+                {% for image in brand.image.all() %}
+                    {% set brandImage = image.url %}
+                {% endfor %}
+                <div class="brands-slider__item">
+                    <img src="{{ brandImage }}" class="brands-slider__logo">
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>

@@ -1,16 +1,20 @@
-<h1>Text Block with Sidebar</h1>
+{% if block.headline %}
+    <h2>{{ block.headline }}</h2>
+{% endif %}
 
 <div class="text-block">
-    <div class="container">
-        <div class="text-block__summary">
-            <div class="wrapper">
-                <h2 class="text-block__summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+    {# <div class="container">
+        {% if block.summary %}
+            <div class="text-block__summary">
+                <div class="wrapper">
+                    <h2 class="text-block__summary">{{ block.summary }}</h2>
+                </div>
             </div>
-        </div>
+        {% endif %}
         <div class="text-block__body wrapper wrapper--flex">
             <div class="text-block__content">
-                <h3>This is a subtitle for your text</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                {% if block.subtitle %}<h3>{{ block.subtitle }}</h3>{% endif %}
+                {% if block.contentText %}<p>{{ block.contentText }}</p>{% endif %}
             </div>
             <div class="text-block__sidebar">
                 <div class="bordered-image">
@@ -21,5 +25,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> #}
 </div>
